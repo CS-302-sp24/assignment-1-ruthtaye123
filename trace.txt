@@ -1,0 +1,32 @@
+All right-handed philosophers leading to deadlock
+
+Philosopher Thread-0 has thought 10 times
+Philosopher Thread-2 has thought 10 times
+Philosopher Thread-4 has thought 10 times
+Philosopher Thread-1 has thought 10 times
+Philosopher Thread-3 has thought 10 times
+
+
+Combination of left-handed and right-handed philosophers
+
+Philosopher Thread-1 has thought 10 times
+Philosopher Thread-0 has thought 10 times
+Philosopher Thread-4 has thought 10 times
+Philosopher Thread-2 has thought 10 times
+Philosopher Thread-3 has thought 10 times
+
+Five philosophers eating forever" showing a chance deadlock
+
+Philosopher Thread-0 has thought 10 times
+Philosopher Thread-1 has thought 10 times
+Philosopher Thread-2 has thought 10 times
+Philosopher Thread-3 has thought 10 times
+Philosopher Thread-4 has thought 10 times
+
+Five philosophers eating forever with large maximum thinking and eating times
+
+Philosopher Thread-0 has thought 10 times
+Philosopher Thread-1 has thought 10 times
+Philosopher Thread-2 has thought 10 times
+Philosopher Thread-3 has thought 10 times
+Philosopher Thread-4 has thought 10 times
