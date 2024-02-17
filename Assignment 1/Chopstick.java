@@ -1,5 +1,3 @@
-import java.util.Random;
-
 class Chopstick {
     private int id;
     

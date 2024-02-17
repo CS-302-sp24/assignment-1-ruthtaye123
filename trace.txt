@@ -1,32 +1,227 @@
-All right-handed philosophers leading to deadlock
-
-Philosopher Thread-0 has thought 10 times
-Philosopher Thread-2 has thought 10 times
-Philosopher Thread-4 has thought 10 times
-Philosopher Thread-1 has thought 10 times
-Philosopher Thread-3 has thought 10 times
+input: DiningPhilosophers 2 0 1000 800 0
+In this scenario, there are only two philosophers, both right-handed.
+Each philosopher first attempts to acquire their right chopstick.
+Since both philosophers are right-handed and attempt to acquire the same chopstick first, a deadlock occurs.
 
 
-Combination of left-handed and right-handed philosophers
+Philosopher 0 thinks for 485 units
+Philosopher 1 thinks for 139 units
+Philosopher 0 wants right chopstick
+Philosopher 0 has right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 189 units
+Philosopher 0 thinks for 522 units
+Philosopher 0 wants right chopstick
+Philosopher 0 has right chopstick
+Philosopher 1 wants right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 611 units
+Philosopher 0 thinks for 956 units
+Philosopher 1 has right chopstick
+Philosopher 1 has left chopstick
+Philosopher 1 eats for 456 units
+Philosopher 0 wants right chopstick
+Philosopher 1 thinks for 289 units
+Philosopher 0 has right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 469 units
 
-Philosopher Thread-1 has thought 10 times
-Philosopher Thread-0 has thought 10 times
-Philosopher Thread-4 has thought 10 times
-Philosopher Thread-2 has thought 10 times
-Philosopher Thread-3 has thought 10 times
 
-Five philosophers eating forever" showing a chance deadlock
 
-Philosopher Thread-0 has thought 10 times
-Philosopher Thread-1 has thought 10 times
-Philosopher Thread-2 has thought 10 times
-Philosopher Thread-3 has thought 10 times
-Philosopher Thread-4 has thought 10 times
+input: DiningPhilosophers 5 0 1500 1200 1
+In this scenario, there are five philosophers, with alternating right-handed and left-handed.
+Each philosopher first attempts to acquire their right chopstick, then the left one.
+Since philosophers alternate handedness, they can acquire the required chopsticks without deadlock.
 
-Five philosophers eating forever with large maximum thinking and eating times
+Philosopher 2 thinks for 876 units
+Philosopher 3 thinks for 997 units
+Philosopher 1 thinks for 954 units
+Philosopher 4 thinks for 1254 units
+Philosopher 0 thinks for 990 units
+Philosopher 4 wants right chopstick
+Philosopher 2 wants right chopstick
+Philosopher 4 has right chopstick
+Philosopher 2 has right chopstick
+Philosopher 2 has left chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 eats for 170 units
+Philosopher 2 eats for 115 units
+Philosopher 1 wants left chopstick
+Philosopher 1 has left chopstick
+Philosopher 2 thinks for 843 units
+Philosopher 1 has right chopstick
+Philosopher 1 eats for 278 units
+Philosopher 3 wants left chopstick
+Philosopher 3 has left chopstick
+Philosopher 0 wants right chopstick
+Philosopher 4 thinks for 853 units
+Philosopher 3 has right chopstick
+Philosopher 3 eats for 347 units
+Philosopher 4 wants right chopstick
+Philosopher 4 has right chopstick
+Philosopher 2 wants right chopstick
+Philosopher 3 thinks for 415 units
+Philosopher 2 has right chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 eats for 1104 units
+Philosopher 1 thinks for 294 units
+Philosopher 0 has right chopstick
+Philosopher 2 has left chopstick
+Philosopher 2 eats for 478 units
+Philosopher 2 thinks for 54 units
+Philosopher 2 wants right chopstick
+Philosopher 2 has right chopstick
+Philosopher 2 has left chopstick
+Philosopher 2 eats for 1091 units
+Philosopher 4 thinks for 1206 units
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 963 units
+Philosopher 2 thinks for 245 units
+Philosopher 3 wants left chopstick
+Philosopher 3 has left chopstick
+Philosopher 3 has right chopstick
+Philosopher 3 eats for 111 units
+Philosopher 1 wants left chopstick
+Philosopher 4 wants right chopstick
+Philosopher 0 thinks for 927 units
+Philosopher 4 has right chopstick
+Philosopher 1 has left chopstick
+Philosopher 1 has right chopstick
+Philosopher 1 eats for 945 units
+Philosopher 4 has left chopstick
+Philosopher 3 thinks for 1424 units
+Philosopher 4 eats for 565 units
+Philosopher 3 wants left chopstick
+Philosopher 3 has left chopstick
+Philosopher 2 wants right chopstick
+Philosopher 0 wants right chopstick
+Philosopher 1 thinks for 32 units
+Philosopher 0 has right chopstick
+Philosopher 1 wants left chopstick
+Philosopher 4 thinks for 913 units
+Philosopher 0 has left chopstick
+Philosopher 3 has right chopstick
+Philosopher 0 eats for 1197 units
+Philosopher 3 eats for 645 units
+Philosopher 3 thinks for 832 units
+Philosopher 2 has right chopstick
+Philosopher 2 has left chopstick
+Philosopher 2 eats for 151 units
+Philosopher 3 wants left chopstick
+Philosopher 2 thinks for 483 units
 
-Philosopher Thread-0 has thought 10 times
-Philosopher Thread-1 has thought 10 times
-Philosopher Thread-2 has thought 10 times
-Philosopher Thread-3 has thought 10 times
-Philosopher Thread-4 has thought 10 times
+
+input: DiningPhilosophers 5 0 2000 1800 1
+in this scenario, there are five philosophers, all left-handed.
+Each philosopher first attempts to acquire their right chopstick.
+Since all philosophers are left-handed and attempt to acquire the same chopstick first, a deadlock occurs.
+
+Philosopher 0 thinks for 1252 units
+Philosopher 3 thinks for 668 units
+Philosopher 2 thinks for 1533 units
+Philosopher 4 thinks for 1665 units
+Philosopher 1 thinks for 389 units
+Philosopher 1 wants left chopstick
+Philosopher 1 has left chopstick
+Philosopher 1 has right chopstick
+Philosopher 1 eats for 506 units
+Philosopher 4 wants right chopstick
+Philosopher 4 has right chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 eats for 290 units
+Philosopher 0 wants right chopstick
+Philosopher 3 wants left chopstick
+Philosopher 3 has left chopstick
+Philosopher 2 wants right chopstick
+Philosopher 4 thinks for 346 units
+Philosopher 3 has right chopstick
+Philosopher 3 eats for 546 units
+Philosopher 1 thinks for 761 units
+Philosopher 0 has right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 1182 units
+Philosopher 3 thinks for 1065 units
+Philosopher 2 has right chopstick
+Philosopher 2 has left chopstick
+Philosopher 2 eats for 416 units
+Philosopher 4 wants right chopstick
+Philosopher 1 wants left chopstick
+Philosopher 3 wants left chopstick
+Philosopher 1 has left chopstick
+Philosopher 0 thinks for 998 units
+Philosopher 4 has right chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 eats for 119 units
+Philosopher 0 wants right chopstick
+Philosopher 1 has right chopstick
+Philosopher 1 eats for 529 units
+Philosopher 2 thinks for 1660 units
+Philosopher 3 has left chopstick
+Philosopher 2 wants right chopstick
+Philosopher 3 has right chopstick
+Philosopher 4 thinks for 1267 units
+Philosopher 3 eats for 381 units
+Philosopher 1 thinks for 1512 units
+Philosopher 0 has right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 719 units
+Philosopher 3 thinks for 1893 units
+Philosopher 2 has right chopstick
+Philosopher 2 has left chopstick
+Philosopher 2 eats for 493 units
+Philosopher 3 wants left chopstick
+Philosopher 1 wants left chopstick
+Philosopher 2 thinks for 170 units
+Philosopher 3 has left chopstick
+Philosopher 3 has right chopstick
+Philosopher 3 eats for 1075 units
+Philosopher 1 has left chopstick
+Philosopher 0 thinks for 469 units
+Philosopher 1 has right chopstick
+Philosopher 1 eats for 1271 units
+Philosopher 4 wants right chopstick
+Philosopher 4 has right chopstick
+Philosopher 2 wants right chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 eats for 980 units
+Philosopher 2 has right chopstick
+Philosopher 3 thinks for 1865 units
+Philosopher 3 wants left chopstick
+Philosopher 0 wants right chopstick
+Philosopher 1 thinks for 1897 units
+Philosopher 2 has left chopstick
+Philosopher 0 has right chopstick
+Philosopher 2 eats for 1496 units
+Philosopher 1 wants left chopstick
+Philosopher 2 thinks for 755 units
+Philosopher 3 has left chopstick
+Philosopher 4 thinks for 166 units
+Philosopher 3 has right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 1442 units
+Philosopher 3 eats for 521 units
+Philosopher 4 wants right chopstick
+Philosopher 0 thinks for 723 units
+Philosopher 1 has left chopstick
+Philosopher 4 has right chopstick
+Philosopher 1 has right chopstick
+Philosopher 1 eats for 850 units
+Philosopher 2 wants right chopstick
+Philosopher 2 has right chopstick
+Philosopher 4 has left chopstick
+Philosopher 3 thinks for 1544 units
+Philosopher 4 eats for 226 units
+Philosopher 0 wants right chopstick
+Philosopher 0 has right chopstick
+Philosopher 1 thinks for 1513 units
+Philosopher 2 has left chopstick
+Philosopher 2 eats for 219 units
+Philosopher 3 wants left chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 eats for 185 units
+Philosopher 4 thinks for 1986 units
+Philosopher 1 wants left chopstick
+Philosopher 0 thinks for 1905 units
+Philosopher 1 has left chopstick
+Philosopher 3 has left chopstick
+Philosopher 1 has right chopstick

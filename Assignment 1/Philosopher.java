@@ -1,31 +1,52 @@
+import java.util.Random;
 
 class Philosopher extends Thread {
-  private Chopstick first, second;
-  private Random random;
-  private int thinkCount;
+    private Chopstick left, right;
+    private Random random;
+    //private int thinkCount;
+    private int id;
+    private int cycles;
+    private int maxThinkingTime;
+    private int maxEatingTime;
+    private boolean rightHanded;
 
-  public Philosopher(Chopstick first, Chopstick second) {
-      this.first = first;
-      this.second = second;
-      random = new Random();
-  }
+    public Philosopher(int id, Chopstick left, Chopstick right, int cycles, int maxThinkingTime, int maxEatingTime, boolean rightHanded) {
+        this.id = id;
+        this.left = left;
+        this.right = right;
+        this.cycles = cycles;
+        this.maxThinkingTime = maxThinkingTime;
+        this.maxEatingTime = maxEatingTime;
+        this.rightHanded = rightHanded;
+        random = new Random();
+    }
 
-  public void run() {
-      try {
-          while (true) {
-              ++thinkCount;
-              if (thinkCount % 10 == 0)
-                  System.out.println("Philosopher " + this + " has thought " + thinkCount + " times");
-              Thread.sleep(random.nextInt(1000)); // Think for a while
-              synchronized (first) { // Grab first chopstick
-                  synchronized (second) { // Grab second chopstick
-                      Thread.sleep(random.nextInt(1000)); // Eat for a while
-                  }
-              }
-          }
-      } catch (InterruptedException e) {
-          Thread.currentThread().interrupt(); // Restore interrupted status
-          return;
-      }
-  }
+    @Override
+    public void run() {
+        try {
+            for (int i = 0; cycles == 0 || i < cycles; i++) {
+                think();
+                eat();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void think() throws InterruptedException {
+        System.out.println("Philosopher " + id + " thinks for " + random.nextInt(maxThinkingTime) + " units");
+        Thread.sleep(random.nextInt(maxThinkingTime)); // Think for a while
+    }
+
+    private void eat() throws InterruptedException {
+        System.out.println("Philosopher " + id + " wants " + (rightHanded ? "right" : "left") + " chopstick");
+        synchronized (rightHanded ? right : left) { // Grab right/left chopstick
+            System.out.println("Philosopher " + id + " has " + (rightHanded ? "right" : "left") + " chopstick");
+            synchronized (rightHanded ? left : right) { // Grab left/right chopstick
+                System.out.println("Philosopher " + id + " has " + (rightHanded ? "left" : "right") + " chopstick");
+                System.out.println("Philosopher " + id + " eats for " + random.nextInt(maxEatingTime) + " units");
+                Thread.sleep(random.nextInt(maxEatingTime)); // Eat for a while
+            }
+        }
+    }
 }
